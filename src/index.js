@@ -41,3 +41,24 @@ export function caesarCipher(str, shiftFactor) {
 		})
 		.join("");
 }
+
+export function analyzeArray(arr) {
+	return arr.reduce(
+		(obj, value, index) => {
+			if (index + 1 < arr.length) obj.average += value;
+			else {
+				const average = (obj.average + value) / arr.length;
+				obj.average = Number(average.toFixed(1));
+			}
+			obj.min = value < obj.min ? value : obj.min;
+			obj.max = value > obj.max ? value : obj.max;
+			return obj;
+		},
+		{
+			average: 0,
+			min: arr[0],
+			max: arr[0],
+			length: arr.length,
+		},
+	);
+}
