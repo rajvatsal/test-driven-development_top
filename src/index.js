@@ -18,17 +18,13 @@ export function Calculator() {
 
 function cipherLowerCase(char, shift) {
 	let cipher = char.charCodeAt() + shift;
-	while (cipher > 122) {
-		cipher = cipher - 123 + 97;
-	}
+	while (cipher > 122) cipher = cipher - 123 + 97;
 	return String.fromCharCode(cipher);
 }
 
 function cipherUpperCase(char, shift) {
 	let cipher = char.charCodeAt() + shift;
-	while (cipher > 90) {
-		cipher = cipher - 91 + 65;
-	}
+	while (cipher > 90) cipher = cipher - 91 + 65;
 	return String.fromCharCode(cipher);
 }
 

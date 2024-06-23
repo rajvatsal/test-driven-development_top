@@ -35,5 +35,5 @@ it("Caesar's Cipher Preserve Case", () =>
 	expect(caesarCipher("tooDDler", 5)).toMatch(/^yttIIqjw$/));
 it("Caesar's Cipher Preserve Puntuations", () =>
 	expect(caesarCipher("Hello, World!", 3)).toMatch(/^Khoor, Zruog!$/));
-it("Caesar's Cipher", () =>
+it("Caesar's Cipher Large shift factors", () =>
 	expect(caesarCipher("Hello, world!!", 50)).toMatch(/^Fcjjm, umpjb!!$/));
